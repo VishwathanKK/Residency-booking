@@ -1,27 +1,28 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>VISHWA Residency </title>
-  <title>Booking.com</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f1f1f1;
-      color: #333;
-      margin: 0;
-      padding: 0;
-    }
+  <html>
+  <head>
+    <meta charset="utf-8">
+    <title>V G Residency </title>
+    <link rel="icon" href="IMG_20230705_114719.jpg" type="image/x-icon">
+    <style>
+       body {
+        font-family: Arial, sans-serif;
+        background-color:rgb(100, 200,179);
+        color: #333;
+        margin: 0;
+        padding: 0;
+      }
     
-    h1 {
-      text-align: center;
-      color: #333;
-      margin-top: 30px;
-    }
+      h1 {
+        text-align: center;
+        color: #333;
+        margin-top: 30px;
+      }
     
-    .header {
-      text-align: center;
-      margin-bottom: 20px;
-    }
+      .header {
+        text-align: center;
+        margin-bottom: 20px;
+      }
     
     .header img {
       width: 200px;
@@ -83,55 +84,180 @@
     button:hover {
       background-color: #45a049;
     }
+    .rp{
+      font-size: 25px;
+      font-family: 'Times New Roman', Times, serif;
+      color: rgb(38, 7, 192);
+    }
   </style>
 </head>
 <body>
   <div class="header">
-    <img src="D:\hotel\IMG_20230624_123217.jpg"alt="Hotel Image">
+    <img src="D:\hotel\IMG_20230705_114719.jpg" alt="Hotel Image">
   </div>
   
-  <h1>VISHWA RESIDENCY 
+  <h1>V G RESIDENCY 
         BOOKING.COM
   </h1>
-  <h2>Star Rating: ⭐⭐⭐⭐⭐  </h2> <!-- Add star rating here -->
-  <h2>Free Cancellation: Yes, until 24 hrs before check-in</h2> <!-- Add free cancellation information -->
-  <h2>Address: 123 Example Street, City, Country</h2> <!-- Add address here -->
+  <h2>Star Rating: ⭐⭐⭐⭐⭐</h2> <!-- Add star rating here -->
+  <h2>Free Cancellation : Avilable until 24 hrs before check-in</h2> <!-- Add free cancellation information -->
+  <h2>Address: 123 V G NAGAR,TUTICORIN - TIRUNELVELI MAIN ROAD ,INDIA</h2> <!-- Add address here -->
   <div class="parking">
-    <h2>Big Parking Slot Availability</h2>
-    <p>We have a limited number of big parking slots available for our guests.</p>
-    <p>Please contact our front desk for more information and to reserve a big parking slot.</p>
+    <aside>
+      <summary><h2>Big Parking Slot Availability</h2></summary>
+      <details><b><p>We have a limited number of big parking slots available for our guests.</p>
+        <p>Please contact our front desk for more information and to reserve a big parking slot.</p></b></details>
+    </aside>
   </div>
+  
   <div class="room">
-    <img class="room-image" src="D:\hotel\Room-Type-Single-Room.jpg"alt="Single ">
+    <img class="room-image" src="D:\hotel\Room-Type-Single-Room.jpg" alt="Single">
     <div class="room-details">
       <h2>Single</h2>
-      <p><li>Room facilities: Pool or mountain views, terrace, telephone, flat screen TV with satellite channels, free safe, hot/cold air conditioned, desk,  parquet floor, wardrobe, mini fridge , hairdryer, free toiletries, gel / shampoo dispenser and bathtub.</li></p>
-      <p><li>Price: ₹ 1000 per night</li></p>
-      <button>Book Now</button>
+      <p>Room facilities: Pool or mountain views, terrace, telephone, flat screen TV with satellite channels, free safe, hot/cold air conditioned, desk,  parquet floor, wardrobe, mini fridge , hairdryer, free toiletries, gel / shampoo dispenser and bathtub.</p>
+      <p>Price: ₹ 1000 per night</p>
+      <label for="single-room">Room:</label>
+      <input type="number" id="single-room" name="single-room" min="0" max="6" value="0">
+      <button onclick="calculateTotal('single', 1000)">Book Now</button>
     </div>
   </div>
   
   <div class="room">
-    <img class="room-image" src="D:\hotel\1a4601375472a5d70877c5ccd53556d5.jpg"alt="Double ">
+    <img class="room-image" src="D:\hotel\1a4601375472a5d70877c5ccd53556d5.jpg" alt="Double">
     <div class="room-details">
       <h2>Double</h2>
-      <p><li>Room facilities: Pool or mountain views, terrace, telephone, flat screen TV with satellite channels, free safe, hot/cold air conditioned, desk,  parquet floor, wardrobe, mini fridge , hairdryer, free toiletries, gel / shampoo dispenser and bathtub.</li></p>
-      <p><li>Price: ₹ 2000 per night</li></p>
-      <button>Book Now</button>
+      <p>Room facilities: Pool or mountain views, terrace, telephone, flat screen TV with satellite channels, free safe, hot/cold air conditioned, desk,  parquet floor, wardrobe, mini fridge , hairdryer, free toiletries, gel / shampoo dispenser and bathtub.</p>
+      <p>Price: ₹ 2000 per night</p>
+      <label for="double-room">Room:</label>
+      <input type="number" id="double-room" name="double-room" min="0" max="6" value="0">
+      <button onclick="calculateTotal('double', 2000)">Book Now</button>
     </div>
   </div>
-
-
- <div class="room">
+  <div class="room">
     <img class="room-image" src="D:\hotel\22he9q8fmll31.jpg" alt="Triple">
     <div class="room-details">
       <h2>Triple</h2>
-      <p><li>Room facilities: Pool or mountain views, terrace, telephone, flat screen TV with satellite channels, free safe, hot/cold air conditioned, desk,  parquet floor, wardrobe, mini fridge , hairdryer, free toiletries, gel / shampoo dispenser and bathtub.</li></p>
-      <p><li>Price :₹ 3000 per night</li></p>
-      <button>Book Now</button>
+      <p>Room facilities: Pool or mountain views, terrace, telephone, flat screen TV with satellite channels, free safe, hot/cold air conditioned, desk,  parquet floor, wardrobe, mini fridge , hairdryer, free toiletries, gel / shampoo dispenser and bathtub.</p>
+      <p>Price: ₹ 3000 per night</p>
+      <label for="triple-room">Room:</label>
+      <input type="number" id="triple-room" name="triple-room" min="0" max="6" value="0">
+      <button onclick="calculateTotal('triple', 3000)">Book Now</button>
     </div>
   </div>
-  <!-- Add more room listings here -->
-  
+  <div id="booking-details">
+    <h2>Booking Details:</h2>
+    <label for="check-in" class="rp">Check-in Date:</label>
+    <input type="date" id="check-in" name="check-in" required><br>
+    <label for="check-out" class="rp">Check-out Date:</label>
+    <input type="date" id="check-out" name="check-out" required><br>
+    <label for="name" class="rp">Name:</label>
+    <input type="text" id="name" name="name" required><br>
+    <label for="email" class="rp">Email:</label>
+    <input type="email" id="email" name="email" required><br>
+    <label for="phone" class="rp">Phone:</label>
+    <input type="tel" id="phone" name="phone" required><br>
+    <label for="payment-method" class="rp">Payment Method:</label>
+    <select id="payment-method" name="payment-method">
+      <option value="Net-banking">Net Banking</option>
+      <option value="UPI">UPI</option>
+    </select><br>
+    <p id="total-price"class="rp"></p>
+    <button onclick="confirmBooking()">Confirm Booking</button>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+    calculateTotal('single', 1000); // Calculate the total price on page load
+    });
+
+    function calculateTotal(roomType, price) {
+    var quantity;
+    switch (roomType) {
+      case 'single':
+        quantity = document.getElementById('single-room').value;
+        break;
+      case 'double':
+        quantity = document.getElementById('double-room').value;
+        break;
+      case 'triple':
+        quantity = document.getElementById('triple-room').value;
+        break;
+    }
+
+    var checkInDate = new Date(document.getElementById('check-in').value);
+    var checkOutDate = new Date(document.getElementById('check-out').value);
+    var nights = Math.ceil((checkOutDate - checkInDate) / (1000 * 60 * 60 * 24));
+
+    var totalPrice = quantity * price + (nights - 1) * 500;
+    document.getElementById('total-price').textContent = 'Total Price: ₹ ' + totalPrice;
+
+  // Update the booking details visibility
+    var bookingDetails = document.getElementById('booking-details');
+    bookingDetails.style.display = 'block';
+    bookingDetails.scrollIntoView(); // Scroll to the booking details section
+    }
+
+    function confirmBooking() {
+    var checkIn = document.getElementById('check-in').value;
+    var checkOut = document.getElementById('check-out').value;
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var phone = document.getElementById('phone').value;
+    var paymentMethod = document.getElementById('payment-method').value;
+
+  // Validate the phone number (only digits allowed)
+    var phoneRegex = /^\d+$/;
+    if (!phone.match(phoneRegex)) {
+      alert('Please enter a valid phone number.');
+      return;
+    }
+
+  // Validate the email address
+    var emailRegex = /\S+@\S+\.\S+/;
+    if (!email.match(emailRegex)) {
+      alert('Please enter a valid email address.');
+      return;
+    }
+
+  // Validate the name (required field)
+    if (name.trim() === '') {
+      alert('Please enter your name.');
+      return;
+    }
+
+    var singleQuantity = parseInt(document.getElementById('single-room').value);
+    var doubleQuantity = parseInt(document.getElementById('double-room').value);
+    var tripleQuantity = parseInt(document.getElementById('triple-room').value);
+
+    var singlePrice = 1000;
+    var doublePrice = 2000;
+    var triplePrice = 3000;
+
+    var checkInDate = new Date(checkIn);
+    var checkOutDate = new Date(checkOut);
+    var nights = Math.ceil((checkOutDate - checkInDate) / (1000 * 60 * 60 * 24));
+
+    var totalPrice =singleQuantity * singlePrice +doubleQuantity * doublePrice + tripleQuantity * triplePrice;
+    totalPrice += (nights - 1) * (singleQuantity + doubleQuantity + tripleQuantity) * 500;
+
+    var newWindow = window.open('', '_blank');
+    newWindow.document.write('<html><head><title>Booking Confirmation</title>');
+    newWindow.document.write('<style>body { text-align: center; color: #333; }</style>');
+    newWindow.document.write('</head><body>');
+    newWindow.document.write('<h2>Booking Details:</h2>');
+    newWindow.document.write('<p><strong>Name:</strong> ' + name + '</p>');
+    newWindow.document.write('<p><strong>Email:</strong> ' + email + '</p>');
+    newWindow.document.write('<p><strong>Phone:</strong> ' + phone + '</p>');
+    newWindow.document.write('<p><strong>Payment Method:</strong> ' + paymentMethod + '</p>');
+    newWindow.document.write('<p><strong>Check-in Date:</strong> ' + checkIn + '</p>');
+    newWindow.document.write('<p><strong>Check-out Date:</strong> ' + checkOut + '</p>');
+    newWindow.document.write('<p><strong>Total Price:</strong> ₹ ' + totalPrice + '</p>');
+    newWindow.document.write('<h2>THANK YOU FOR BOOKING!!!</h2>');
+    newWindow.document.write('</body></html>');
+    newWindow.document.close();
+
+    alert('Booking confirmed!');
+  }
+  </script>
 </body>
 </html>
